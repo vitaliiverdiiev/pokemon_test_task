@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
+
+$color-primary: #474747;
+$color-secondary: #7b61ff;
+$color-secondary-shadow: #7b61ff75;
+$color-secondary-text: #ffffff;
+
+$color-fighting: #9d4242;
+$color-fire: #fb522d;
+$color-dark: #5c5c5c;
+$color-normal: #aaaaaa;
+$color-ground: #976d63;
+
+$screen-xxs: 320px;
+$screen-xs: 375px;
+$screen-s: 576px;
+$screen-m: 768px;
+$screen-l: 996px;
+$screen-xl: 1200px;
+
+* {
+  cursor: url("../images/cursor.svg"), auto;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.3;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.section__title {
+  position: relative;
+  font-size: 36px;
+  font-weight: 700;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 200px;
+    height: 3px;
+    background-color: $color-primary;
+  }
+}

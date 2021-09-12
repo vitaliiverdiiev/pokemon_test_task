@@ -1,0 +1,76 @@
+.cards__items {
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+  grid-gap: 15px;
+  margin: 80px 0;
+}
+
+.card {
+  padding: 46px 24px 16px;
+
+  &__image {
+    margin: 15px auto 30px;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    font-size: 30px;
+  }
+
+  &__info {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn {
+    height: 67px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: $color-primary;
+    color: $color-secondary-text;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &:hover {
+    box-shadow: 2px 1px 12px $color-secondary-shadow;
+
+    .btn {
+      background-color: $color-secondary;
+    }
+
+    .card__image {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.badge {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: $color-secondary-text;
+  font-size: 12px;
+
+  &--fighting {
+    background-color: $color-fighting;
+  }
+  &--fire {
+    background-color: $color-fire;
+  }
+  &--dark {
+    background-color: $color-dark;
+  }
+  &--normal {
+    background-color: $color-normal;
+  }
+  &--ground {
+    background-color: $color-ground;
+  }
+}
