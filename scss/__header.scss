@@ -18,7 +18,7 @@
     display: grid;
     grid-template-columns: 7fr 4fr;
     grid-gap: 8.5%;
-    margin-top: 202px; // ??? or padding
+    padding-top: 202px;
   }
 
   &__title {
@@ -45,9 +45,11 @@
   left: 50%;
   bottom: 10vh;
   transform: translateX(-50%);
+  width: 105px;
   height: 80px;
   font-size: 10px;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
 
   &:after {
