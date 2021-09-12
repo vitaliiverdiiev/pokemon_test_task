@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon | FTL</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+</html>
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <a class="logo" href="#">
+        <img class="logo__image" src="./images/logo.svg" alt="logo" width="141" height="61" />
+      </a>
+    </nav>
+    <div class="header__inner container">
+      <div class="header__text">
+        <h1 class="header__title">This is an Internal test task</h1>
+        <div class="header__subtitle">
+          <p>Hello, don’t be afraid.</p>
+          <p>This task is easier than looks like.</p>
+          <p>
+            It’s no magic, no quests and no math here. Only <strong>your skill</strong> in
+            <strong><em>semantic markup</em></strong> matters. In this Figma design you already have
+            everything to successfully path our test, just be attentive to details, take your time
+            and GOOD LUCK.
+          </p>
+        </div>
+      </div>
+      <figure class="header__image">
+        <img src="./images/welcome.svg" alt="welcome dino" width="359" height="400" />
+      </figure>
+    </div>
+    <a class="scroll-down" id="scroll-down">Tap to sroll down</a>
+  </header>
+  <section class="cards container" id="cards">
+    <h2 class="section__title">Cards</h2>
+    <ul class="cards__items">
+      <li class="cards__item card">
+        <figure class="card__image">
+          <img src="./images/emboar.svg" alt="Emboar" width="261" height="273" />
+        </figure>
+        <div class="card__description">
+          <h3 class="card__name">Emboar</h3>
+          <p class="card__info">Generation: 5</p>
+          <p class="card__info">
+            Type:
+            <span class="badge badge--fighting">Fighting</span>
+            <span class="badge badge--fire">Fire</span>
+          </p>
+        </div>
+        <button class="btn">Choose</button>
+      </li>
+      <li class="cards__item card">
+        <figure class="card__image">
+          <img src="./images/darkrai.svg" alt="Darkrai" width="261" height="273" />
+        </figure>
+        <div class="card__description">
+          <h3 class="card__name">Darkrai</h3>
+          <p class="card__info">Generation: 5</p>
+          <p class="card__info">
+            Type:
+            <span class="badge badge--dark">Dark</span>
+          </p>
+        </div>
+        <button class="btn">Choose</button>
+      </li>
+      <li class="cards__item card">
+        <figure class="card__image">
+          <img src="./images/diggersby.svg" alt="Diggersby" width="261" height="273" />
+        </figure>
+        <div class="card__description">
+          <h3 class="card__name">Diggersby</h3>
+          <p class="card__info">Generation: 5</p>
+          <p class="card__info">
+            Type:
+            <span class="badge badge--normal">Normal</span>
+            <span class="badge badge--ground">Ground</span>
+          </p>
+        </div>
+        <button class="btn">Choose</button>
+      </li>
+    </ul>
+  </section>
+  <section class="map">
+    <div class="container">
+      <h2 class="section__title">Map</h2>
+    </div>
+    <div id="map"></div>
+  </section>
+  <script>
+    const initMap = () => {
+      const coordinates = { lat: 50.5123466, lng: 30.5321037 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 9,
+        center: coordinates,
+      });
+    }
+  </script>
+  <script
+    async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMI9x4fvEc_yAAtweTmVLk9KleRRkadQo&callback=initMap"
+  ></script>
+  <script>
+    const scrollTo = () => {
+      const yOffset = -115;
+      const element = document.getElementById("cards");
+      const position = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: position, behavior: "smooth" });
+    };
+    document.getElementById("scroll-down").addEventListener("click", scrollTo);
+  </script>
+</body>
+</html>
